@@ -1,0 +1,336 @@
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1e293b 0%,
+            #0f172a 45%,
+            #020617 100%
+        );
+
+    color: white;
+}
+
+
+/* ==========================================
+   CALCULATOR
+========================================== */
+
+.calculator {
+    width: 420px;
+
+    padding: 22px;
+
+    border-radius: 28px;
+
+    background: rgba(15, 23, 42, 0.95);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.55);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.header h1 {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+.header span {
+    padding: 5px 10px;
+
+    border-radius: 8px;
+
+    background: #1e293b;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   DISPLAY
+========================================== */
+
+.display-box {
+    width: 100%;
+
+    height: 105px;
+
+    padding: 12px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 18px;
+
+    background: #020617;
+
+    overflow: hidden;
+}
+
+
+#previous {
+    height: 25px;
+
+    text-align: right;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    overflow: hidden;
+}
+
+
+#display {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: right;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   BUTTON GRID
+========================================== */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 11px;
+}
+
+
+/* ==========================================
+   ALL BUTTONS
+========================================== */
+
+button {
+    height: 62px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+
+button:hover {
+    background: #334155;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+button:active {
+    transform: scale(0.94);
+}
+
+
+/* ==========================================
+   FUNCTION BUTTONS
+========================================== */
+
+.function {
+    background: #475569;
+}
+
+
+.function:hover {
+    background: #64748b;
+}
+
+
+/* ==========================================
+   SCIENTIFIC BUTTONS
+========================================== */
+
+.scientific {
+    background: #4f46e5;
+}
+
+
+.scientific:hover {
+    background: #4338ca;
+}
+
+
+/* ==========================================
+   OPERATOR BUTTONS
+========================================== */
+
+.operator {
+    background: #f59e0b;
+}
+
+
+.operator:hover {
+    background: #d97706;
+}
+
+
+/* ==========================================
+   SPECIAL CHARACTERS
+========================================== */
+
+.special {
+    background: #334155;
+
+    color: #cbd5e1;
+}
+
+
+.special:hover {
+    background: #475569;
+}
+
+
+/* ==========================================
+   EQUAL BUTTON
+========================================== */
+
+.equal {
+    background: #22c55e;
+
+    color: white;
+}
+
+
+.equal:hover {
+    background: #16a34a;
+}
+
+
+/* ==========================================
+   ZERO BUTTON
+========================================== */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .calculator {
+        width: 100%;
+
+        padding: 15px;
+
+        border-radius: 22px;
+    }
+
+
+    .header h1 {
+        font-size: 16px;
+    }
+
+
+    #display {
+        font-size: 28px;
+    }
+
+
+    button {
+        height: 55px;
+
+        font-size: 16px;
+
+        border-radius: 13px;
+    }
+
+
+    .buttons {
+        gap: 8px;
+    }
+}
